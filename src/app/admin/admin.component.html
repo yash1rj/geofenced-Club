@@ -1,0 +1,13 @@
+<app-header [username]="username"></app-header>
+<div class="main">
+    <agm-map [latitude]="center.lat" [longitude]="center.lng" [zoom]="zoom">
+        <agm-marker [latitude]="center.lat" [longitude]="center.lng"></agm-marker>
+    </agm-map>
+    <h4>Location Alerts</h4>
+    <div class="alert" [hidden]="true">
+        <p>This user has left the Club !</p>
+    </div>
+    <div class="location alert" [hidden]="true">
+        <p>message</p>
+    </div>
+</div>
