@@ -7,6 +7,8 @@ import { HomeComponent } from './home/home.component';
 import { AdminComponent } from './admin/admin.component';
 import { HeaderComponent } from './header/header.component';
 
+import { HttpClientModule } from '@angular/common/http';
+
 import { AgmCoreModule } from '@agm/core';
 
 @NgModule({
@@ -19,6 +21,7 @@ import { AgmCoreModule } from '@agm/core';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyDsWBpK6Qa8G5ACTbdyEpkgICIm_ePq3zI',
       libraries: ['geometry']
