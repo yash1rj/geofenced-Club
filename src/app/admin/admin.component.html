@@ -2,12 +2,13 @@
 <div class="main">
     <agm-map [latitude]="center.lat" [longitude]="center.lng" [zoom]="zoom">
         <agm-marker [latitude]="center.lat" [longitude]="center.lng"></agm-marker>
+        <agm-polygon [paths]="polygon"></agm-polygon>
     </agm-map>
     <h4>Location Alerts</h4>
-    <div class="alert" [hidden]="true">
+    <div class="alert" [hidden]="!showAlert">
         <p>This user has left the Club !</p>
     </div>
-    <div class="location alert" [hidden]="true">
-        <p>message</p>
+    <div class="location alert" [hidden]="!showLocationUpdate">
+        <p>This user's location has changed</p>
     </div>
 </div>
